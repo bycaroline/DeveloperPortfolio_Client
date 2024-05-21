@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
-import LayoutStart from './components/LayoutStart';
+import LayoutStart from './pages/LayoutStart';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectCards from './components/ProjectCards';
-import ProjectPage from './components/ProjectPage';
+import ProjectPage from './pages/ProjectPage';
 
 // function App() {
 //   return (
