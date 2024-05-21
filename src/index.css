@@ -1,7 +1,8 @@
 body,
 html {
   margin: 0;
-  background-image: url(../public/images/background.jpg);
+  /* background-color: #a2b1ba; */
+  background-image: url(../public/images/background6.jpg);
   background-attachment: fixed;
   height: 100%;
   background-position: center;

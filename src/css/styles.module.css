@@ -1,23 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@100;200;300;400&family=Montserrat:wght@100;200;300;400&family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@100;200;300;400;600;700&family=Montserrat:wght@100;200;300;400&family=Oooh+Baby&display=swap');
 
 h1 {
     font-family: 'Oooh Baby', cursive;
-    font-size: 2em;
+    font-size: 2.2em;
     color: rgb(32, 32, 32);
     font-weight: 400;
     letter-spacing: 0.08rem;
-    line-height: 0.87em;
+    line-height: 0.6em;
 }
 
 h2 {
-    font-family: 'Oooh Baby', cursive;
+    font-family: 'Inter';
     font-size: 1.5em;
     color: rgb(32, 32, 32);
     margin-top: 30px;
     margin-bottom: 10px;
     letter-spacing: 0.08rem;
-    text-align: center;
+    text-align: left;
+    font-variant: small-caps;
+    font-weight: 200;
+}
 
+h3 {
+    font-weight: 400;
+    font-family: 'Inter';
+    font-size: 1.8em;
+    color: rgb(32, 32, 32);
+    margin-bottom: 10px;
+    letter-spacing: 0.08rem;
+    text-align: left;
+    font-variant: small-caps;
+}
+
+h4 {
+    font-weight: 300;
+    font-family: 'Inter';
+    font-size: 1.4em;
+    color: rgb(32, 32, 32);
+    margin-bottom: 10px;
+    letter-spacing: 0.08rem;
+    text-align: left;
+    font-variant: small-caps;
 }
 
 a {
@@ -35,6 +58,7 @@ p {
     letter-spacing: 0.01rem;
     font-size: 1.1em;
     color: rgb(61, 61, 61);
+    line-height: 1.6em;
 }
 
 button {
@@ -43,12 +67,16 @@ button {
 
 ul,
 li {
-    list-style-type: none;
+    /* list-style-type: none; */
     padding: 0;
+    font-family: 'inter', sans-serif;
+    letter-spacing: 0.01rem;
+    font-size: 1.1em;
+    color: rgb(61, 61, 61);
+    line-height: 1.7em;
 }
 
 .wrapper {
-    /* justify-content: center; */
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
@@ -57,6 +85,7 @@ li {
     margin: auto;
     border-radius: 30px;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .headerDash {
@@ -92,9 +121,13 @@ li {
     margin-top: 20px;
 }
 
+.wrapperParagraph1 h1 {
+    margin-top: 32px;
+}
+
 .wrapperParagraph1 img {
     margin-right: 40px;
-    width: 120px;
+    width: 150px;
     height: auto;
 }
 
@@ -123,6 +156,7 @@ li {
     margin-bottom: 20px;
     display: flex;
     width: 1200px;
+    justify-content: center;
 }
 
 .row {
@@ -145,9 +179,7 @@ li {
 .textProjectCard {
     display: flex;
     justify-content: space-between;
-    /* Pushes the children elements to the start and end of the row */
     align-items: center;
-    /* Aligns items vertically to center */
 }
 
 .textProjectCard p {
@@ -168,4 +200,99 @@ li {
     border: 0.2px solid #abaaaa;
     border-radius: 10%;
     padding: 5px;
+}
+
+.ProjectPageTopSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+
+
+.ProjectPageWrapperTopSection {
+    border: 1px solid #d6d6d6;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: flex;
+    width: 500px;
+    justify-content: left;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    height: fit-content;
+}
+
+.ProjectPageWrapperTopSectionImg {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.ProjectPageTopSection img {
+    width: 700px;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.ProjectPageWrapperBottomSection {
+    border: 1px solid #d6d6d6;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 1220px;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.ulFunctionalitiesAndProcess {
+    list-style-type: none;
+}
+
+
+
+.listWithDots {
+    list-style-type: disc;
+}
+
+.listWithDots li {
+    margin-left: 20px;
+}
+
+.wrapperSkills {
+    border: 1px solid #d6d6d6;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+}
+
+.wrapperSkills img {
+    width: 200px;
+    height: auto;
+}
+
+.footer p {
+    color: rgb(129, 129, 129);
 }
