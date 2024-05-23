@@ -1,37 +1,29 @@
 import React from 'react';
-import ProjectCards from './ProjectCards';
 import styles from '../css/styles.module.css';
-import cs from '../assets/cs.png';
-import gi from '../assets/gi.png';
-import html from '../assets/html.png';
-import nod from '../assets/nod.png';
-import jav from '../assets/jav.png';
-import mong from '../assets/mong.png';
 
-
-const Skills = ({ projects }) => {
-
+//My skills
+const Skills = ({ skills }) => {
+    const backendUrl = 'http://localhost:8080';
 
     return (
         <section className={styles.wrapperSkills}>
-            <h3>my skills</h3>
             <div>
-                <img src={cs} alt="" />
-                <p>CSS</p>
-                <img src={gi} alt="" />
-                <p>Github</p>
-                <img src={html} alt="" />
-                <p>HTML</p>
-                <img src={jav} alt="" />
-                <p>Javascript</p>
-                <img src={nod} alt="" />
-                <p>Node</p>
-                <img src={mong} alt="" />
-                <p>Mongo DB</p>
-
+                <h3>my skills</h3>
             </div>
-        </section>
+            <div className={styles.skillsContainer}>
+                {skills.map((skill, index) => (
+                    <div key={index} className={styles.skillItem}>
+                        <img src={`${backendUrl}/${skill.image}`} alt={`${skill.name} icon`} className={styles.skillImage} />
+                        <p>{skill.name}</p>
+                    </div>
+                ))}
+            </div>
+        </section >
     );
 };
 
 export default Skills;
+
+
+
+

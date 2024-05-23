@@ -2,10 +2,12 @@ import React from 'react'
 import styles from '../css/styles.module.css'
 import { Link } from 'react-router-dom';
 
+//Showing each project
 const ProjectCards = ({ project }) => {
-    // Assuming your backend server is running on localhost:8080
+    // Assuming backend server is running on localhost:8080
     const backendUrl = 'http://localhost:8080';
 
+    //Limit the text in the projectCard
     const MAX_DESCRIPTION_LENGTH = 40;
 
     const truncatedDescription = project.description.length > MAX_DESCRIPTION_LENGTH
@@ -15,9 +17,9 @@ const ProjectCards = ({ project }) => {
     return (
         <div className={styles.projectCard}>
             <h2>{project.name}</h2>
-            {/* <Link to={`/projects/${project.id}`}> */}
-            <img src={`${backendUrl}${project.iconImage}`} alt={`Image ${project.name}`} />
-            {/* </Link> */}
+            <Link to={`/projects/${project.id}`}>
+                <img src={`${backendUrl}${project.iconImage}`} alt={`Image ${project.name}`} />
+            </Link>
             <div className={styles.textProjectCard}>
                 <p>{truncatedDescription}</p>
                 <Link to={`/projects/${project.id}`}>Read more</Link>
@@ -27,3 +29,5 @@ const ProjectCards = ({ project }) => {
 };
 
 export default ProjectCards;
+
+

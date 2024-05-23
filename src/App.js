@@ -4,18 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectCards from './components/ProjectCards';
 import ProjectPage from './pages/ProjectPage';
 
-// function App() {
-//   return (
-//     <Fragment>
-//       <Routes>
-//         <Route index element={<LayoutStart />} />
-//         <Route path="/*" element={<LayoutStart />} />
-//       </Routes>
-//     </Fragment>
-//   );
-// }
 
-// export default App;
 
 
 

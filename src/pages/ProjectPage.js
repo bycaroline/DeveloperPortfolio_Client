@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { sendRequest } from '../services/HttpHandler';
 import styles from '../css/styles.module.css';
+import Footer from '../components/Footer';
+import { IoIosArrowBack } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
+//Showing each project page
 const ProjectPage = () => {
     const boldStyle = { fontWeight: '700' };
     const { projectId } = useParams();
@@ -31,6 +35,12 @@ const ProjectPage = () => {
 
     return (
         <div className={styles.wrapper}>
+            <div className={styles.headerProjectPage}>
+                <IoIosArrowBack />
+                <Link to="/">
+                    <p>Back</p>
+                </Link>
+            </div>
             <div className={styles.ProjectPageTopSection}>
                 <div className={styles.ProjectPageWrapperTopSection}>
                     <h3>{project.name}</h3>
@@ -84,9 +94,7 @@ const ProjectPage = () => {
                 <p><a href={project.github} target="_blank" rel="noopener noreferrer">{project.github}</a></p>
 
             </div>
-            <div className={styles.footer}>
-                <p>eklund.caroline@gmail.com</p>
-            </div>
+            <Footer />
 
         </div>
     );

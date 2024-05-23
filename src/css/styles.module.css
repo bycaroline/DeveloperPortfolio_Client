@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@100;200;300;400;600;700&family=Montserrat:wght@100;200;300;400&family=Oooh+Baby&display=swap');
 
+/* Typography */
 h1 {
     font-family: 'Oooh Baby', cursive;
     font-size: 2.2em;
@@ -43,44 +44,59 @@ h4 {
     font-variant: small-caps;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(109, 109, 109);
-    font-family: 'inter', sans-serif;
-}
-
-a:hover {
-    color: rgb(39, 39, 39);
-}
-
 p {
-    font-family: 'inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.1em;
     color: rgb(61, 61, 61);
     line-height: 1.6em;
 }
 
-button {
-    cursor: pointer;
+a {
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+    font-family: 'Inter', sans-serif;
 }
 
+a:hover {
+    color: rgb(39, 39, 39);
+}
+
+/* Lists */
 ul,
 li {
-    /* list-style-type: none; */
     padding: 0;
-    font-family: 'inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.1em;
     color: rgb(61, 61, 61);
     line-height: 1.7em;
 }
 
+.ulFunctionalitiesAndProcess {
+    list-style-type: none;
+}
+
+.listWithDots {
+    list-style-type: disc;
+}
+
+.listWithDots li {
+    margin-left: 20px;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+}
+
+/* General Wrapper */
 .wrapper {
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
-    width: 1400px;
+    width: 98%;
+    max-width: 1400px;
     position: relative;
     margin: auto;
     border-radius: 30px;
@@ -88,6 +104,7 @@ li {
     padding-bottom: 50px;
 }
 
+/* Header */
 .headerDash {
     margin-left: auto;
     margin-top: 30px;
@@ -98,9 +115,7 @@ li {
     margin-top: 100px;
     border: 0.2px solid #a8a8a8;
     border-radius: 10%;
-    padding: 8px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 8px 20px;
 }
 
 .headerDash a:hover {
@@ -108,12 +123,12 @@ li {
     border-radius: 10%;
 }
 
-
+/* Text Intro */
 .wrapperTextIntro {
     width: 1200px;
-
 }
 
+/* Paragraph Wrappers */
 .wrapperParagraph1 {
     display: flex;
     flex-direction: row;
@@ -131,7 +146,6 @@ li {
     height: auto;
 }
 
-
 .wrapperParagraph2 {
     display: flex;
     flex-direction: row;
@@ -146,14 +160,14 @@ li {
     padding: 0 10px;
 }
 
-
+/* Projects Wrapper */
 .wrapperProjects {
     border: 1px solid #d6d6d6;
     background-color: rgba(255, 255, 255, 0.95);
     opacity: 0.95;
     border-radius: 20px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     width: 1200px;
     justify-content: center;
@@ -162,9 +176,9 @@ li {
 .row {
     flex-direction: row;
     justify-content: center;
-
 }
 
+/* Project Card */
 .projectCard {
     margin: 40px;
     margin-bottom: 60px;
@@ -188,44 +202,101 @@ li {
     justify-self: start;
 }
 
-
-.projectCard a {
-    border: 0.2px solid #ccc;
-    border-radius: 10%;
-    padding: 5px;
-    justify-self: end;
-}
-
-.projectCard a:hover {
+.textProjectCard a {
     border: 0.2px solid #abaaaa;
     border-radius: 10%;
     padding: 5px;
+    justify-self: end;
+
+}
+
+.textProjectCard a:hover {
+    border-radius: 10%;
+    padding: 5px;
+}
+
+/* Skills Wrapper */
+.wrapperSkills {
+    border: 1px solid #d6d6d6;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 1200px;
+    padding: 20px;
+    max-width: 1200px;
+    padding-bottom: 60px;
+}
+
+.wrapperSkills h3 {
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.wrapperSkills img {
+    width: 100px;
+    height: auto;
+}
+
+.skillsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin-left: -20px;
+}
+
+.skillItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skillImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer p {
+    color: rgb(129, 129, 129);
+    margin-top: 50px;
+}
+
+/* Project Page */
+.headerProjectPage {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-start;
+    padding-left: 30px;
+    margin-top: 10px;
 }
 
 .ProjectPageTopSection {
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 2px;
 }
-
-
 
 .ProjectPageWrapperTopSection {
     border: 1px solid #d6d6d6;
     background-color: rgba(255, 255, 255, 0.95);
     opacity: 0.95;
     border-radius: 20px;
-    margin-top: 50px;
+    margin-top: 2px;
     margin-bottom: 20px;
     margin-right: 20px;
     display: flex;
     width: 500px;
     justify-content: left;
     flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 50px;
-    padding-top: 20px;
+    padding: 20px 40px 50px 40px;
     height: fit-content;
 }
 
@@ -233,7 +304,6 @@ li {
     display: flex;
     justify-self: center;
     align-self: center;
-    justify-self: center;
 }
 
 .ProjectPageTopSection img {
@@ -243,7 +313,6 @@ li {
     display: flex;
     justify-self: center;
     align-self: center;
-    justify-self: center;
 }
 
 .ProjectPageWrapperBottomSection {
@@ -251,48 +320,91 @@ li {
     background-color: rgba(255, 255, 255, 0.95);
     opacity: 0.95;
     border-radius: 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     display: flex;
     width: 1220px;
     justify-content: center;
     flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
 }
 
-.ulFunctionalitiesAndProcess {
-    list-style-type: none;
-}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 1000px;
+        margin: auto;
+    }
 
+    .wrapperTextIntro {
+        width: 950px;
+        padding: 10px;
+    }
 
+    .wrapperParagraph2 {
+        display: flex;
+        flex-direction: column;
+    }
 
-.listWithDots {
-    list-style-type: disc;
-}
+    .wrapperParagraph2>div {
+        width: 100%;
+    }
 
-.listWithDots li {
-    margin-left: 20px;
-}
+    .wrapperParagraph2 p {
+        font-size: 1.8em;
+    }
 
-.wrapperSkills {
-    border: 1px solid #d6d6d6;
-    background-color: rgba(255, 255, 255, 0.95);
-    opacity: 0.95;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    width: 1200px;
-    justify-content: center;
-}
+    .footer p {
+        font-size: 1.8em;
 
-.wrapperSkills img {
-    width: 200px;
-    height: auto;
-}
+    }
 
-.footer p {
-    color: rgb(129, 129, 129);
+    .wrapperProjects {
+
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .projectCard {
+        margin: 40px;
+        margin-bottom: 60px;
+    }
+
+    .projectCard img {
+        width: 600px;
+        height: auto;
+        border: 0.2px solid #ccc;
+    }
+
+    .wrapperSkills {
+        width: 90%;
+    }
+
+    .skillsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .ProjectPageTopSection {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
+    .ProjectPageWrapperTopSection {
+        width: 80%;
+    }
+
+    .ProjectPageWrapperBottomSection {
+        width: 70%;
+    }
+
 }
