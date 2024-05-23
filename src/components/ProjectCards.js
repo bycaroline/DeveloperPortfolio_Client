@@ -1,17 +1,33 @@
 import React from 'react'
 import styles from '../css/styles.module.css'
-import GarnGalore from '../assets/GarnGalore.jpg';
+import { Link } from 'react-router-dom';
 
-function ProjectCard() {
+//Showing each project
+const ProjectCards = ({ project }) => {
+    // Assuming backend server is running on localhost:8080
+    const backendUrl = 'http://localhost:8080';
+
+    //Limit the text in the projectCard
+    const MAX_DESCRIPTION_LENGTH = 40;
+
+    const truncatedDescription = project.description.length > MAX_DESCRIPTION_LENGTH
+        ? project.description.substring(0, MAX_DESCRIPTION_LENGTH) + '...'
+        : project.description;
+
     return (
         <div className={styles.projectCard}>
-            <img src={GarnGalore} />
+            <h2>{project.name}</h2>
+            <Link to={`/projects/${project.id}`}>
+                <img src={`${backendUrl}${project.iconImage}`} alt={`Image ${project.name}`} />
+            </Link>
             <div className={styles.textProjectCard}>
-                <p>Java team project to create a webshop using... </p>
-                <a href="">Read more</a>
+                <p>{truncatedDescription}</p>
+                <Link to={`/projects/${project.id}`}>Read more</Link>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ProjectCard
+export default ProjectCards;
+
+

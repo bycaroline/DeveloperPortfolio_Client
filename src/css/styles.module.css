@@ -1,105 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@100;200;300;400&family=Montserrat:wght@100;200;300;400&family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@100;200;300;400;600;700&family=Montserrat:wght@100;200;300;400&family=Oooh+Baby&display=swap');
 
+/* Typography */
 h1 {
     font-family: 'Oooh Baby', cursive;
-    font-size: 2em;
+    font-size: 2.2em;
     color: rgb(32, 32, 32);
     font-weight: 400;
     letter-spacing: 0.08rem;
-
+    line-height: 0.6em;
 }
 
 h2 {
-    font-family: 'Oooh Baby', cursive;
+    font-family: 'Inter';
     font-size: 1.5em;
     color: rgb(32, 32, 32);
     margin-top: 30px;
     margin-bottom: 10px;
     letter-spacing: 0.08rem;
-    text-align: center;
+    text-align: left;
+    font-variant: small-caps;
+    font-weight: 200;
+}
 
+h3 {
+    font-weight: 400;
+    font-family: 'Inter';
+    font-size: 1.8em;
+    color: rgb(32, 32, 32);
+    margin-bottom: 10px;
+    letter-spacing: 0.08rem;
+    text-align: left;
+    font-variant: small-caps;
+}
+
+h4 {
+    font-weight: 300;
+    font-family: 'Inter';
+    font-size: 1.4em;
+    color: rgb(32, 32, 32);
+    margin-bottom: 10px;
+    letter-spacing: 0.08rem;
+    text-align: left;
+    font-variant: small-caps;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.01rem;
+    font-size: 1.1em;
+    color: rgb(61, 61, 61);
+    line-height: 1.6em;
 }
 
 a {
     text-decoration: none;
     color: rgb(109, 109, 109);
-    font-family: 'inter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 a:hover {
     color: rgb(39, 39, 39);
 }
 
-p {
-    font-family: 'inter', sans-serif;
+/* Lists */
+ul,
+li {
+    padding: 0;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.01rem;
-    font-size: 0.98em;
+    font-size: 1.1em;
     color: rgb(61, 61, 61);
+    line-height: 1.7em;
 }
 
+.ulFunctionalitiesAndProcess {
+    list-style-type: none;
+}
+
+.listWithDots {
+    list-style-type: disc;
+}
+
+.listWithDots li {
+    margin-left: 20px;
+}
+
+/* Buttons */
 button {
     cursor: pointer;
 }
 
-ul,
-li {
-    list-style-type: none;
-    padding: 0;
-}
-
+/* General Wrapper */
 .wrapper {
-    /* justify-content: center; */
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
-    width: 1400px;
+    width: 98%;
+    max-width: 1400px;
     position: relative;
     margin: auto;
     border-radius: 30px;
     align-items: center;
+    padding-bottom: 50px;
 }
 
+/* Header */
 .headerDash {
-    margin-left: 50px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 20px;
-    align-items: center;
-    font-size: 1.3em;
+    margin-left: auto;
+    margin-top: 30px;
 }
 
 .headerDash a {
-    margin-left: 50px;
-    font-family: 'inter', sans-serif;
-    letter-spacing: 0.01rem;
-    font-size: 1.3em;
-    text-decoration: none;
-    color: rgb(73, 73, 73);
-    font-weight: 300;
-    margin: 5px;
-    margin-left: 20px;
+    margin: 50px;
+    margin-top: 100px;
+    border: 0.2px solid #a8a8a8;
+    border-radius: 10%;
+    padding: 8px 20px;
 }
 
 .headerDash a:hover {
-    color: rgb(16, 16, 16);
+    border: 0.2px solid #abaaaa;
+    border-radius: 10%;
 }
 
+/* Text Intro */
 .wrapperTextIntro {
     width: 1200px;
-    /* display: flex;
-    flex-direction: row;
-    align-items: center; */
-
 }
 
-.hello {
+/* Paragraph Wrappers */
+.wrapperParagraph1 {
     display: flex;
-    align-items: left;
-    margin-left: 80px;
+    flex-direction: row;
+    margin-left: 120px;
+    margin-top: 20px;
 }
 
-.shortAbout {
+.wrapperParagraph1 h1 {
+    margin-top: 32px;
+}
+
+.wrapperParagraph1 img {
+    margin-right: 40px;
+    width: 150px;
+    height: auto;
+}
+
+.wrapperParagraph2 {
     display: flex;
     flex-direction: row;
     margin-right: 80px;
@@ -107,43 +154,46 @@ li {
     justify-content: center;
 }
 
-.publicRecipeItem {
+.wrapperParagraph2>div {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* Projects Wrapper */
+.wrapperProjects {
     border: 1px solid #d6d6d6;
     background-color: rgba(255, 255, 255, 0.95);
     opacity: 0.95;
     border-radius: 20px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     width: 1200px;
+    justify-content: center;
 }
 
 .row {
     flex-direction: row;
     justify-content: center;
-
 }
 
-img {
-    width: 500px;
-    /* Example width */
-    height: auto;
-    /* Maintain aspect ratio */
-    border: 0.2px solid #ccc;
-}
-
-
+/* Project Card */
 .projectCard {
     margin: 40px;
     margin-bottom: 60px;
 }
 
+.projectCard img {
+    width: 500px;
+    height: auto;
+    border: 0.2px solid #ccc;
+}
+
 .textProjectCard {
     display: flex;
     justify-content: space-between;
-    /* Pushes the children elements to the start and end of the row */
     align-items: center;
-    /* Aligns items vertically to center */
 }
 
 .textProjectCard p {
@@ -152,649 +202,209 @@ img {
     justify-self: start;
 }
 
-
-.projectCard a {
-    border: 0.2px solid #ccc;
-    border-radius: 10%;
-    padding: 5px;
-    justify-self: end;
-}
-
-.projectCard a:hover {
+.textProjectCard a {
     border: 0.2px solid #abaaaa;
     border-radius: 10%;
     padding: 5px;
-}
-
-
-
-
-
-
-.headerPublic {
-    height: 100px;
-    width: 850px;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    align-items: center;
-}
-
-.headerPublicLogo {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 30px;
-}
-
-.headerPublicSignin {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 420px;
-    width: 200px;
-}
-
-.headerPublicSignin a {
-    color: #666666;
-    letter-spacing: 0.1rem;
-    font-size: 0.85em;
-    border: 1px solid #b3b3b3;
-    border-radius: 8px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 18px;
-    padding-right: 18px;
-    margin-right: 20px;
+    justify-self: end;
 
 }
 
-.headerPublicSignin a:hover {
-    color: #696969;
-    border: solid 1px #d5d5d5;
+.textProjectCard a:hover {
+    border-radius: 10%;
+    padding: 5px;
 }
 
-.publicMain {
-    display: flex;
-    position: relative;
-    align-self: center;
-    margin-top: 80px;
-
+/* Skills Wrapper */
+.wrapperSkills {
+    border: 1px solid #d6d6d6;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 1200px;
+    padding: 20px;
+    max-width: 1200px;
+    padding-bottom: 60px;
 }
 
-.publicRecipes {
-    border-radius: 8px;
-    display: flex;
-    width: 500px;
-    justify-content: center;
-}
-
-
-
-.imgPublic {
-    width: 300px;
-    height: 280px;
-    object-fit: cover;
-    align-self: center;
-}
-
-.textPublicRecipeItem {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.headerSign {
-    text-align: center;
-}
-
-.formSign {
-    margin-top: 50px;
+.wrapperSkills h3 {
+    margin-left: 40px;
     margin-bottom: 50px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+.wrapperSkills img {
+    width: 100px;
+    height: auto;
+}
+
+.skillsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     justify-content: center;
+    margin-left: -20px;
 }
 
-.formSign button {
-    color: white;
-    border: none;
-    background-color: #6E9CAC;
-    padding: 13px;
-    margin: 20px;
-    border-radius: 10px;
-    width: 152px;
-    font-size: medium;
-}
-
-.formSign button:hover {
-    background-color: #7aa9b8;
-}
-
-.formSign textarea:focus,
-
-input:focus {
-    outline: solid 0.02px #717171;
-}
-
-.formSign input {
-    border: 1px solid rgb(168, 168, 168);
-    background-color: rgb(254, 254, 254);
-    padding: 11px;
-    border-radius: 10px;
-    font-size: medium;
-    margin-top: 10px;
-}
-
-.headerDash {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 20px;
-    align-items: center;
-}
-
-.headerDash a {
-    font-family: 'inter', sans-serif;
-    letter-spacing: 0.01rem;
-    font-size: 1.1em;
-    text-decoration: none;
-    color: rgb(73, 73, 73);
-    font-weight: 300;
-    margin: 5px;
-    margin-left: 20px;
-}
-
-.headerDash a:hover {
-    color: rgb(16, 16, 16);
-}
-
-.headerDashLogout {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 15px;
-}
-
-.headerDashLogout button {
-    color: rgb(125, 125, 125);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgb(168, 168, 168);
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 22px;
-    padding-right: 22px;
-    border-radius: 10px;
-    font-size: medium;
-}
-
-.headerDashLogout button:hover {
-    color: rgb(132, 132, 132);
-    border: 1px solid rgb(209, 209, 209);
-
-}
-
-.headerDash input {
-    border: 1px solid rgb(168, 168, 168);
-    background-color: rgb(254, 254, 254);
-    padding: 11px;
-    border-radius: 10px;
-    font-size: medium;
-    margin-left: 110px;
-
-}
-
-.headerDash input:focus {
-    outline: solid 0.02px #717171;
-}
-
-.textAllRecipeItem {
+.skillItem {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
-.textByAllRecipeItem {
-    width: 80%;
-    margin: auto;
-    margin-top: 10px;
+.skillImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
-.textDescriptionAllRecipeItem {
-
-    width: 80%;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 10px;
+/* Footer */
+.footer p {
+    color: rgb(129, 129, 129);
+    margin-top: 50px;
 }
 
-.textAllRecipeItem button {
-    color: rgb(136, 136, 136);
-    border: none;
-    background-color: white;
-    padding: 0px;
-    font-size: medium;
-}
-
-.optionsAllRecipe {
+/* Project Page */
+.headerProjectPage {
+    width: 95%;
     display: flex;
-    width: 100%;
     flex-direction: row;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    align-self: center;
     align-items: center;
+    justify-self: flex-start;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.ProjectPageTopSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+}
+
+.ProjectPageWrapperTopSection {
+    border: 1px solid #d6d6d6;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    display: flex;
+    width: 500px;
+    justify-content: left;
+    flex-direction: column;
+    padding: 20px 40px 50px 40px;
+    height: fit-content;
+}
+
+.ProjectPageWrapperTopSectionImg {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.ProjectPageTopSection img {
+    width: 700px;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.ProjectPageWrapperBottomSection {
+    border: 1px solid #d6d6d6;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0.95;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 1220px;
     justify-content: center;
-}
-
-.optionsAllRecipe a {
-    color: rgb(95, 95, 95);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #b3b3b3;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 22px;
-    padding-right: 22px;
-    border-radius: 10px;
-    font-size: 0.9em;
-    margin: 5px;
-}
-
-.optionsAllRecipe a:hover {
-    color: rgb(132, 132, 132);
-    border: 1px solid rgb(209, 209, 209);
-}
-
-.optionsAllRecipe button {
-    color: rgb(95, 95, 95);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #b3b3b3;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 22px;
-    padding-right: 22px;
-    border-radius: 10px;
-    font-size: 0.9em;
-    margin: 5px;
-}
-
-.optionsAllRecipe button:hover {
-    color: rgb(132, 132, 132);
-    border: 1px solid rgb(209, 209, 209);
-}
-
-.commentForm input {
-    border: none;
-    background-color: rgb(239, 239, 239);
-    padding: 11px;
-    border-radius: 30px;
-    font-size: small;
-    width: 400px;
-    margin-bottom: 10px;
-}
-
-.allRecipeComments {
-    align-self: flex-start;
-    margin-bottom: 20px;
-}
-
-.allRecipeComments li {
-    border: none;
-    background-color: rgb(239, 239, 239);
-    padding: 15px;
-    border-radius: 30px;
-    font-size: 1em;
-    margin: 3px;
-    margin-left: 38px;
-    margin-right: 40px;
-}
-
-.myComments p {
-    border: none;
-    background-color: rgb(239, 239, 239);
-    padding: 11px;
-    border-radius: 30px;
-    font-size: 0.9em;
-    margin: 3px;
-}
-
-.myComments button {
-    color: rgb(95, 95, 95);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #b3b3b3;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 22px;
-    padding-right: 22px;
-    border-radius: 10px;
-    font-size: 0.9em;
-    margin: 5px;
-}
-
-.myComments button:hover {
-    color: rgb(132, 132, 132);
-    border: 1px solid rgb(209, 209, 209);
-}
-
-.allUsers h1 {
-    text-align: center;
-}
-
-.allUsers p {
-    margin-bottom: 30px;
-}
-
-.myRecipes h1 {
-    text-align: center;
-}
-
-.newRecipeItem {
-    border: 1px solid #d6d6d6;
-    background-color: rgba(255, 255, 255, 0.95);
-    opacity: 0.95;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
     flex-direction: column;
-    width: 500px;
-    display: flex;
-    align-items: center;
+    padding: 40px;
 }
 
-.newRecipe h1 {
-    text-align: center;
-}
-
-.newRecipeItem input {
-    border: 1px solid rgb(168, 168, 168);
-    background-color: rgb(254, 254, 254);
-    padding: 11px;
-    border-radius: 10px;
-    font-size: medium;
-    margin-left: 35px;
-    margin-top: 40px;
-    width: 400px;
-    margin-bottom: 20px;
-}
-
-.newRecipeItem input:focus {
-    outline: solid 0.02px #717171;
-}
-
-.newRecipeItem textarea {
-    border: 1px solid rgb(168, 168, 168);
-    background-color: rgb(254, 254, 254);
-    padding: 11px;
-    border-radius: 10px;
-    font-size: medium;
-    margin-left: 35px;
-    width: 400px;
-}
-
-.newRecipeItem :focus {
-    outline: solid 0.02px #717171;
-}
-
-.newRecipeItem button {
-    color: rgb(58, 58, 58);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #919191;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 22px;
-    padding-right: 22px;
-    border-radius: 10px;
-    font-size: 0.9em;
-    margin: 5px;
-    margin-left: 35px;
-    margin-bottom: 20px;
-}
-
-.newRecipeItem button:hover {
-    color: rgb(84, 84, 84);
-    border: 1px solid rgb(100, 100, 100);
-}
-
-.newRecipeItem button:disabled {
-    color: rgb(196, 196, 196);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #d4d4d4;
-}
-
-
-.updateRecipeItem {
-    border: 1px solid #d6d6d6;
-    background-color: rgba(255, 255, 255, 0.95);
-    opacity: 0.95;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    flex-direction: column;
-    width: 500px;
-    display: flex;
-    align-items: center;
-}
-
-
-.newRecipeItem {
-    border: 1px solid #d6d6d6;
-    background-color: rgba(255, 255, 255, 0.95);
-    opacity: 0.95;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    flex-direction: column;
-    width: 500px;
-    display: flex;
-    align-items: center;
-}
-
-.newRecipe h1 {
-    text-align: center;
-}
-
-.updateRecipeItem input {
-    border: 1px solid rgb(168, 168, 168);
-    background-color: rgb(254, 254, 254);
-    padding: 11px;
-    border-radius: 10px;
-    font-size: medium;
-
-    margin-top: 40px;
-    width: 400px;
-    margin-bottom: 20px;
-}
-
-.updateRecipeItem input:focus {
-    outline: solid 0.02px #717171;
-}
-
-.updateRecipeItem textarea {
-    border: 1px solid rgb(168, 168, 168);
-    background-color: rgb(254, 254, 254);
-    padding: 11px;
-    border-radius: 10px;
-    font-size: medium;
-    width: 400px;
-}
-
-.updateRecipeItem textarea:focus {
-    outline: solid 0.02px #717171;
-}
-
-.updateRecipeItem button {
-    color: rgb(58, 58, 58);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #919191;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 22px;
-    padding-right: 22px;
-    border-radius: 10px;
-    font-size: 0.9em;
-    margin: 5px;
-
-    margin-bottom: 20px;
-}
-
-.updateRecipeItem button:hover {
-    color: rgb(84, 84, 84);
-    border: 1px solid rgb(100, 100, 100);
-}
-
-.updateRecipeItem button:disabled {
-    color: rgb(196, 196, 196);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid #d4d4d4;
-}
-
-.updateImage p {
-    margin-left: 40px;
-}
-
-.updateImage input {
-    margin-top: 0;
-    margin-left: 40px;
-}
-
-.updateImage button {
-    margin-left: 40px;
-}
-
-.imgUpdate {
-    width: 300px;
-    height: 280px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.imgSearch {
-    width: 300px;
-    height: 280px;
-    object-fit: cover;
-    align-self: center;
-
-}
-
-.textSearch {
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    border-radius: 30px;
-    font-size: 0.9em;
-    margin: 3px;
-}
-
-.imgPage {
-    width: 300px;
-    height: 280px;
-    margin: auto;
-    object-fit: cover;
-    align-self: center;
-}
-
-@media only screen and (max-device-width: 600px) {
+@media screen and (max-width: 768px) {
     .wrapper {
-        width: 400px;
+        width: 1000px;
+        margin: auto;
     }
 
-    .headerPublic {
-        width: 400px;
+    .wrapperTextIntro {
+        width: 950px;
+        padding: 10px;
     }
 
-    .headerPublicSignin {
-        margin-left: 10px;
-        width: 260px;
-    }
-
-    .publicRecipes {
-        width: 200px;
-    }
-
-    .publicRecipeItem {
-        width: 350px;
-    }
-
-    .headerDash {
+    .wrapperParagraph2 {
+        display: flex;
         flex-direction: column;
     }
 
-    .headerDash a {
-        font-size: 1.3em;
-        margin: 0px;
+    .wrapperParagraph2>div {
+        width: 100%;
     }
 
-    .headerDashLogout button {
-        margin-top: 15px;
+    .wrapperParagraph2 p {
+        font-size: 1.8em;
     }
 
-    .headerDash input {
-        margin-left: 0px;
-    }
-
-    .commentForm input {
-        font-size: 1em;
-        width: 260px;
-    }
-
-    .allRecipeComments li {
-        font-size: 1em;
-    }
-
-    .newRecipeItem {
-        width: 350px;
-    }
-
-    .newRecipe h1 {
-        text-align: center;
-    }
-
-    .newRecipeItem input {
-        width: 280px;
-        margin-left: 20px;
-    }
-
-    .newRecipeItem textarea {
-        margin-left: 20px;
-        width: 280px;
-    }
-
-    .newRecipeItem button {
-        margin-left: 20px;
-    }
-
-    .updateRecipeItem {
-        width: 300 px;
+    .footer p {
+        font-size: 1.8em;
 
     }
 
-    .updateRecipeItem input {
-        width: 280px;
-        margin-bottom: 20px;
+    .wrapperProjects {
+
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .updateRecipeItem textarea {
-        width: 280px;
+    .row {
+        flex-direction: row;
+        justify-content: center;
+
     }
 
-    .updateImage p {
-        margin-left: 80px;
+    .projectCard {
+        margin: 40px;
+        margin-bottom: 60px;
     }
 
-    .updateImage input {
-        margin-top: 0;
-        margin-left: 80px;
-        width: 280px;
+    .projectCard img {
+        width: 600px;
+        height: auto;
+        border: 0.2px solid #ccc;
     }
 
-    .updateImage button {
-        margin-left: 80px;
+    .wrapperSkills {
+        width: 90%;
     }
 
-    .imgUpdate {
-        margin-top: 5px;
+    .skillsContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
+
+    .ProjectPageTopSection {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
+    .ProjectPageWrapperTopSection {
+        width: 80%;
+    }
+
+    .ProjectPageWrapperBottomSection {
+        width: 70%;
+    }
+
 }
