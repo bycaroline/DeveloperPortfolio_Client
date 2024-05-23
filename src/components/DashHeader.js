@@ -5,7 +5,7 @@ import styles from '../css/styles.module.css'
 const DashHeader = () => {
     return (
         <div className={styles.headerDash}>
-            <a href="">Admin</a>
+            <a href="/admin">Admin</a>
         </div >
 
     )

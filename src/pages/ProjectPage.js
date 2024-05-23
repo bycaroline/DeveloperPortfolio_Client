@@ -5,6 +5,7 @@ import styles from '../css/styles.module.css';
 import Footer from '../components/Footer';
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import PagesHeader from '../components/PagesHeader';
 
 //Showing each project page
 const ProjectPage = () => {
@@ -35,12 +36,7 @@ const ProjectPage = () => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.headerProjectPage}>
-                <IoIosArrowBack />
-                <Link to="/">
-                    <p>Back</p>
-                </Link>
-            </div>
+            <PagesHeader />
             <div className={styles.ProjectPageTopSection}>
                 <div className={styles.ProjectPageWrapperTopSection}>
                     <h3>{project.name}</h3>
