@@ -8,7 +8,6 @@ This project showcases my work as a developer. Projects, skills and texts are re
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [Features](#features)
 - [License](#license)
 - [Contact](#contact)
@@ -19,21 +18,12 @@ To install this project, clone the repository and run the following commands:
 
 git clone https://github.com/bycaroline/DeveloperPortfolio_Client
 cd DeveloperPortfolio_Client
-npm install
 
-## Usage
-
-To start using the project, run:
-
-npm start
-
-Then open your browser and navigate to http://localhost:3000.
 
 ## Features
 
-- User authentication
-- Fetch requests from backend
-- Responsive design
+- User authentication with Spring Security
+- Database storage in MongoDB atlas
 
 ## License
 
