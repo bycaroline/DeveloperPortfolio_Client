@@ -12,6 +12,25 @@ import Footer from '../components/Footer';
 const LayoutStart = () => {
     const [projects, setProjects] = useState([]);
     const [skills, setSkills] = useState([]);
+    const [about, setAbout] = useState([]);
+
+    //Fetching about
+    useEffect(() => {
+        const fetchAbout = async () => {
+            try {
+                const responseData = await sendRequest(
+                    `http://localhost:8080/about`,
+                    'GET',
+                    null,
+                );
+                //Set the fetched about in state
+                setAbout(responseData);
+            } catch (error) {
+                console.error('Error fetching about:', error);
+            }
+        };
+        fetchAbout();
+    }, []);
 
     //Fetching projects
     useEffect(() => {
@@ -57,7 +76,8 @@ const LayoutStart = () => {
                         <img className={styles.imgHeader} src={profilePhoto} alt="" />
                     </div>
                     <div>
-                        <h1>I´m Caroline,</h1><h1>and this is my developer portfolio</h1>
+                        <h1>{about.length > 0 && about[0].titlePart1}</h1>
+                        <h1>{about.length > 0 && about[0].titlePart2}</h1>
                     </div>
                 </div>
                 <Paragraph2 />
